@@ -1,0 +1,53 @@
+{
+  "name": "other-things-gatsby-starter-2021",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Other Things Gatsby Starter 2021",
+  "author": "richythings",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@popperjs/core": "^2.10.2",
+    "acorn": "^8.5.0",
+    "babel-eslint": "^10.1.0",
+    "bootstrap": "^5.1.3",
+    "gatsby": "^4.2.0",
+    "gatsby-plugin-anchor-links": "^1.2.1",
+    "gatsby-plugin-catch-links": "^3.14.0",
+    "gatsby-plugin-force-trailing-slashes": "^1.0.5",
+    "gatsby-plugin-gdpr-cookies": "^2.0.8",
+    "gatsby-plugin-google-fonts-v2": "^1.0.0",
+    "gatsby-plugin-manifest": "^3.14.0",
+    "gatsby-plugin-portal": "^1.0.7",
+    "gatsby-plugin-react-helmet": "^4.14.0",
+    "gatsby-plugin-sass": "^4.14.0",
+    "gatsby-plugin-sitemap": "^4.10.0",
+    "gatsby-source-storyblok": "^3.0.1",
+    "gsap": "^3.8.0",
+    "react": "^17.0.1",
+    "react-cookie-consent": "^6.4.1",
+    "react-dom": "^17.0.1",
+    "react-gsap": "^3.2.1",
+    "react-helmet": "^6.1.0",
+    "react-markdown": "^7.0.1",
+    "react-moment": "^1.1.1",
+    "react-share": "^4.4.0",
+    "sanitize-html": "^2.5.1",
+    "sass": "^1.42.1",
+    "storyblok-js-client": "^4.1.5",
+    "storyblok-react": "^0.1.2",
+    "typescript": "^4.4.3"
+  }
+}

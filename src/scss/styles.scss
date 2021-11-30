@@ -1,0 +1,414 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+img {
+  max-width: 100%;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  pointer-events: all;
+}
+.brand-cursor {
+  cursor: pointer;
+}
+
+// BREAKPOINT SYNTAX
+// USE THIS CODE
+// WITHIN A CSS RULE
+/*
+@include media-breakpoint-down(sm) {
+  font-size: 12vw;
+}
+*/
+
+// Custom
+$brand-white: #ffffff;
+$brand-black: #222222;
+$brand-yellow: #ecb529;
+$brand-blue: #465d67;
+$brand-blue-dark: #192834;
+$brand-blue-light: #3ba9ce;
+$brand-orange: #e5471d;
+$brand-grey: #d6d9db;
+$brand-green: #25d67e;
+$brand-pink: #ed2f5c;
+$brand-purple: #bf00f2;
+$brand-brown: #443f3e;
+$brand-team-a: #bc3136;
+$brand-team-b: #448eee;
+
+// Bootstrap
+$spacer: 1rem;
+$enable-rounded: true;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-hover-media-query: false;
+$enable-grid-classes: true;
+$enable-print-styles: true;
+$enable-responsive-font-sizes: true;
+$enable-negative-margins: true;
+
+// Colours
+//** Background color for `<body>`.
+$body-bg: $brand-white;
+//** Global text color on `<body>`.
+$body-color: $brand-black;
+
+// $primary: $brand-black;
+// $success: green;
+
+//** Border radius size
+$border-radius: 5px;
+
+//** Font size
+$font-size-root: null;
+$font-size-base: 1.3rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.25;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$font-weight-base: $font-weight-normal;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+//** Buttons
+$btn-white-space: nowrap;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Mixins
+@mixin brand-radius($var) {
+  -webkit-border-radius: $var;
+  -moz-border-radius: $var;
+  -ms-border-radius: $var;
+  border-radius: $var;
+}
+
+/* FONTS */
+@mixin brand-font {
+  font-family: league-gothic, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.brand-font {
+  @include brand-font();
+}
+h2.brand-font {
+  font-size: 2em;
+
+  @include media-breakpoint-up(md) {
+    font-size: 4em;
+  }
+}
+h3.brand-font {
+  font-size: 2.5em;
+}
+.brand-font-shadow {
+  text-shadow: 2px 2px $brand-black;
+}
+.brand-font-shadow-white {
+  text-shadow: 2px 2px $brand-white;
+}
+.brand-font-smaller {
+  font-size: 0.5em;
+}
+
+/* CORNERS */
+.brand-radius {
+  @include brand-radius(7px);
+}
+
+/* COLOURS */
+.brand-background-white {
+  background-color: $brand-white;
+}
+.brand-background-black {
+  background-color: $brand-black;
+}
+.brand-background-grey {
+  background-color: $brand-grey;
+}
+.brand-background-blue {
+  background-color: $brand-blue;
+}
+.brand-background-blue-dark {
+  background-color: $brand-blue-dark;
+}
+.brand-background-blue-light {
+  background-color: $brand-blue-light;
+}
+.brand-background-orange {
+  background-color: $brand-orange;
+}
+.brand-background-grey {
+  background-color: $brand-grey;
+}
+
+.brand-text-white,
+.brand-text-white a,
+a.brand-text-white,
+.brand-link-white a,
+a.brand-link-white {
+  color: $brand-white;
+}
+.brand-text-black,
+.brand-text-black a,
+a.brand-text-black,
+.brand-link-black a,
+a.brand-link-black {
+  color: $brand-black;
+}
+.brand-text-blue,
+.brand-text-blue a,
+a.brand-text-blue,
+.brand-link-blue a,
+a.brand-link-blue {
+  color: $brand-blue;
+}
+.brand-text-blue-dark,
+.brand-text-blue-dark a,
+a.brand-text-blue-dark,
+.brand-link-blue-dark a,
+a.brand-link-blue-dark {
+  color: $brand-blue-dark;
+}
+.brand-text-blue-light,
+.brand-text-blue-light a,
+a.brand-text-blue-light,
+.brand-link-blue-light a,
+a.brand-link-blue-light {
+  color: $brand-blue-light;
+}
+.brand-text-orange,
+.brand-text-orange a,
+a.brand-text-orange,
+.brand-link-orange a,
+a.brand-link-orange {
+  color: $brand-orange;
+}
+.brand-text-grey,
+.brand-text-grey a,
+a.brand-text-grey,
+.brand-link-grey a,
+a.brand-link-grey {
+  color: $brand-grey;
+}
+.brand-text-team-a,
+.brand-text-team-a a,
+a.brand-text-team-a,
+.brand-link-team-a a,
+a.brand-link-team-a {
+  color: $brand-team-a;
+}
+.brand-text-team-b,
+.brand-text-team-b a,
+a.brand-text-team-b,
+.brand-link-team-b a,
+a.brand-link-team-b {
+  color: $brand-team-b;
+}
+
+.brand-border-white {
+  border-color: $brand-white !important;
+}
+
+/* NAVIGATION */
+.brand-navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 90px;
+}
+
+/* FOOTER */
+footer .brand-footer-terms p {
+  margin: 0;
+}
+footer .brand-footer-terms ul,
+footer .brand-footer-terms ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer .brand-footer-terms ul li {
+  display: inline-block;
+  margin-right: 7px;
+}
+footer .brand-footer-terms ul li p:after {
+  content: "·";
+  margin-left: 7px;
+}
+footer .brand-footer-terms ul li:last-child p:after {
+  content: "";
+  margin-left: 0px;
+}
+@include media-breakpoint-down(sm) {
+  footer .brand-footer-terms p {
+    margin-bottom: 1em;
+  }
+  footer .brand-footer-terms ul li p:after {
+    content: "";
+    margin: 0;
+  }
+  footer .brand-footer-terms ul li {
+    display: block;
+    margin: 0;
+  }
+  .brand-footer-terms {
+  }
+}
+footer a {
+  text-decoration: underline;
+}
+
+/* HERO IMAGES */
+.brand-hero-image {
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    width: 75%;
+    max-width: 500px;
+  }
+}
+
+/* BACKGROUND IMAGES */
+.brand-background-responsive {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: $brand-grey;
+  background-image: var(--bgLg);
+
+  @include media-breakpoint-down(lg) {
+    background-color: $brand-grey;
+    background-image: var(--bgMd);
+  }
+  @include media-breakpoint-down(md) {
+    background-color: $brand-grey;
+    background-image: var(--bgSm);
+  }
+}
+.brand-background-responsive.brand-background-fixed,
+.brand-background-fixed {
+  background-attachment: fixed;
+  background-size: contain;
+}
+.brand-background-responsive.brand-background-static,
+.brand-background-static {
+  background-position: center top;
+  background-size: 100% auto;
+  background-color: $brand-brown;
+}
+
+/* BUTTONS */
+.brand-btn {
+  transition: all 0.2s ease-in-out;
+  color: $brand-white;
+  background-color: $brand-orange;
+  @include brand-font();
+  position: relative;
+}
+.brand-btn:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+  color: $brand-white;
+}
+.brand-link-hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+  display: inline-block;
+}
+.brand-link-hover:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.brand-btn-hex {
+  padding: 0.5rem 1rem;
+  font-size: calc(2rem + 0.45vw);
+}
+
+.brand-btn-hex::before,
+.brand-btn-hex::after {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  transform: translate(0.5px, 0px);
+  clip-path: polygon(0 50%, 100% 100%, 100% 0);
+  background-color: $brand-orange;
+}
+.brand-btn-hex::after {
+  left: auto;
+  right: -15px;
+  transform: translate(-0.5px, 0px);
+  clip-path: polygon(100% 50%, 0 100%, 0 0);
+  background-color: $brand-orange;
+}
+
+/* MODALS */
+.modal.brand-modal {
+  display: block;
+}
+.brand-modal-background {
+  background: rgba($color: #000000, $alpha: 0.5);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* FORMS */
+.form-floating > label {
+  padding: 0.8rem 0.75rem;
+}
+
+/* ANIMATIONS */
+.brand-progress-bar {
+  width: 100%;
+  @include media-breakpoint-up(lg) {
+    width: 80%;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 75%;
+  }
+  @include media-breakpoint-up(xxl) {
+    width: 90%;
+  }
+  @media (min-width: 1900px) {
+    width: 100%;
+  }
+}
+.brand-character {
+  width: 300px;
+  height: 400px;
+}
+.brand-progress-pin {
+  width: 80px;
+  height: 80px;
+}
